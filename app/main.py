@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Query, Depends
 from datetime import date
 from pydantic import BaseModel
+from users.router import router as users_router
 from bookings.router import router as bookings_router
 
 
@@ -8,6 +9,7 @@ app = FastAPI()
 
 
 app.include_router(bookings_router)
+app.include_router(users_router)
 
 
 class HotelsSearchArgs:
@@ -40,4 +42,3 @@ class SBooking(BaseModel):
 @app.post("/bookings/")
 def add_booking(booking: SBooking):
     pass
-
