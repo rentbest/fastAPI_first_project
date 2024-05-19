@@ -34,3 +34,8 @@ class TokenAbsentException(BaseException):
 class IncorrectTokenException(BaseException):
     status_code = status.HTTP_401_UNAUTHORIZED
     detail = "Неверный формат токена"
+
+
+class RoomCannotBeBooked(BaseException):
+    status_code = status.HTTP_409_CONFLICT
+    detail  = "Не осталось свободных номеров"
