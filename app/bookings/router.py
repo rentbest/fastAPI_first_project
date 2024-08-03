@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends
 from bookings.dao import BookingDAO
 from bookings.schemas import SBooking
-from users.dependencies import get_current_user
-from users.models import Users
+from app.users.dependencies import get_current_user
+from app.users.models import Users
 from datetime import date
 from exceptions import RoomCannotBeBooked
 

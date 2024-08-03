@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Query, Depends
 from datetime import date
 from pydantic import BaseModel
-from users.router import router as users_router
+from app.users.router import router as users_router
 from bookings.router import router as bookings_router
 
 

@@ -1,9 +1,9 @@
 from fastapi import HTTPException, Request, Depends, status
 from jose import jwt, JWTError
-from users.models import Users
-from config import settings
+from app.users.models import Users
+from app.config import settings
 from datetime import datetime
-from users.dao import UsersDAO
+from app.users.dao import UsersDAO
 from exceptions import (
     TokenExpireException,
     TokenAbsentException,
